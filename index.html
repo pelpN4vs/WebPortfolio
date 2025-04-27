@@ -1,0 +1,484 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+    html {
+  scroll-behavior: smooth;
+}
+   body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a;
+            color: #e5e5e5;
+        }
+        .sidebar {
+            background-color: #2c2c2c;
+            position: fixed;
+            height: 100%;
+            width: 25%;
+        }
+        .content {
+            background-color: #1a1a1a;
+            margin-left: 25%;
+            width: 75%;
+        }
+        .highlight {
+            color: #f5a623;
+        }
+        .skill-bar {
+            background-color: #2c2c2c;
+        }
+        .skill-bar-inner {
+            background-color: #f5a623;
+        }
+        .sidebar .flex {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  text-align: center;
+}
+p{
+    text-align: left;
+    
+}
+.sidebar .flex a:hover {
+    color: #f5a623;
+}
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+        @media (max-width: 768px) {
+      .sidebar {
+          position: relative;
+          width: 100%;
+          height: auto;
+          margin-bottom: 2rem;
+          text-align: center;
+      }
+      .content {
+          margin-left: 0;
+          width: 100%;
+      }
+      .sidebar .flex {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+  }
+  }
+  .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #f5a623;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        padding: 15px;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+      }
+      .back-to-top:hover {
+        background-color: #d88c1b;
+      }
+  </style>
+ </head>
+ <body>
+  <!-- Sidebar -->
+  <div class="sidebar p-6 lg:p-10 flex flex-col items-center">
+    <img alt="Profile picture of" class="mb-4 object-cover" src="images\p1.jpg" width="150" height="200"/>
+
+   <h1 class="text-2xl font-bold mb-2">
+    Yvan Phillip
+   </h1>
+   <p class="text-center mb-4">
+    3rd Year IT Student
+   </p>
+   <div class="text-center mb-4">
+    <p>
+     Phone: +63 926 533 2114
+    </p>
+    <p>
+     Email: ryvanphillip@gmail.com
+    </p>
+    <p>
+     Location: General Trias, Cavite City
+    </p>
+   </div>
+   <div class="flex space-x-4">
+    <a class="text-xl" href="https://www.facebook.com/pelpnavs/">
+     <i class="fab fa-facebook">
+     </i>
+    </a>
+    <a class="text-xl" href="https://www.instagram.com/pelpnavs/">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+    <a class="text-xl" href="https://www.linkedin.com/in/phillip-yvan-ragusta-b5476535a/">
+     <i class="fab fa-linkedin">
+     </i>
+    </a>
+    <a class="text-xl" href="https://github.com/pelpN4vs">
+     <i class="fab fa-github">
+     </i>
+    </a>
+   </div>
+  </div>
+  <!-- Content -->
+  <div class="content p-6 lg:p-10">
+   <!-- Navigation -->
+   <nav class="mb-6">
+    <ul class="flex space-x-4">
+     <li>
+      <a class="highlight" href="index.html">
+       Resume
+      </a>
+     </li>
+     <li>
+      <a href="#quizzes">
+       Quizzes
+      </a>
+     </li>
+     <li>
+      <a href="#project">
+      Projects
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <!-- About Me Section -->
+   <section class="mb-10">
+    <h2 class="text-3xl font-bold mb-4">
+     About Me
+    </h2>
+    <p class="mb-4">
+        Hello! My name is Phillip Yvan P. Ragusta, a third-year Bachelor of Science in Information Technology student at Cavite State University – Silang Campus. I’m passionate about technology and how it continuously shapes the way we live and work. Throughout my academic journey, I’ve been building my skills in programming, web development, and database management, and I’m always eager to learn more about the latest trends in the IT industry. As a student, I strive to apply what I learn not just in academics but also in real-world scenarios, with the goal of becoming a competent and innovative IT professional in the future.
+    </p>
+    <p class="mb-4">
+    My vision is To become a highly skilled and innovative IT professional who contributes to the advancement of technology and creates meaningful solutions that improve lives and empower communities.
+
+
+    </p>
+   </section>
+   <!-- What I'm Doing Section -->
+   <section class="mb-10">
+    <h2 class="text-3xl font-bold mb-4">
+     What I'm Doing
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+     <div class="p-4 bg-gray-800 rounded-lg">
+      <h3 class="text-xl font-bold mb-2">
+       Web Design
+      </h3>
+      <p>
+       High-quality web design services with a focus on user experience and aesthetics.
+      </p>
+     </div>
+     <div class="p-4 bg-gray-800 rounded-lg">
+      <h3 class="text-xl font-bold mb-2">
+       Web Development
+      </h3>
+      <p>
+       Building responsive and functional websites using the latest technologies.
+      </p>
+     </div>
+    
+     <div class="p-4 bg-gray-800 rounded-lg">
+      <h3 class="text-xl font-bold mb-2">
+       Photography
+      </h3>
+      <p>
+       Capturing stunning photos for any occasion or purpose.
+      </p>
+     </div> 
+     <div class="p-4 bg-gray-800 rounded-lg">
+      <h3 class="text-xl font-bold mb-2">
+      
+      </h3>
+      <p>
+      
+      </p>
+     </div>
+    </div>
+   </section>
+   <div id="resume"></div>
+   <!-- Resume Section -->
+   <section class="mb-10">
+    <h2 class="text-3xl font-bold mb-4">
+     Resume
+    </h2>
+    <div class="mb-6">
+     <h3 class="text-2xl font-bold mb-2">
+      Education
+     </h3>
+     <ul>
+      <li class="mb-2">
+       <h4 class="font-bold">
+        Julian Felipe Elementary School
+       </h4>
+       <p>
+        Grade 1- Grade 2, 2009 - 2010
+       </p>
+      </li>
+      <li class="mb-2">
+       <h4 class="font-bold">
+        Sunny Brooke Elementary School
+       </h4>
+       <p>
+       Elementary Diploma, 2010 - 2016
+       </p>
+      </li>
+      <li class="mb-2">
+       <h4 class="font-bold">
+        Governor Luis A. Ferrer jr. East National HS
+       </h4>
+       <p>
+        High School Diploma, 2016 - 2020
+       </p>
+      </li>
+      <li class="mb-2">
+        <h4 class="font-bold">
+        AMACC CAVITE-CAMPUS
+        </h4>
+        <p>
+        Senior High School Diploma, 2020 - 2022
+        </p>
+       </li>
+     </ul>
+    </div>
+
+    <div>
+     <h3 class="text-2xl font-bold mb-2">
+      My Skills
+     </h3>
+     <div class="mb-4">
+      <h4 class="font-bold">
+       Web Design
+      </h4>
+      <div class="skill-bar w-full h-2 rounded-full overflow-hidden">
+       <div class="skill-bar-inner h-full w-3/5">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <h4 class="font-bold">
+       Photography
+      </h4>
+      <div class="skill-bar w-full h-2 rounded-full overflow-hidden">
+       <div class="skill-bar-inner h-full w-4/5">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <h4 class="font-bold">
+       Editing
+      </h4>
+      <div class="skill-bar w-full h-2 rounded-full overflow-hidden">
+       <div class="skill-bar-inner h-full w-2/3">
+       </div>
+      </div>
+     </div>
+     <div class="mb-4">
+      <h4 class="font-bold">
+       Logic
+      </h4>
+      <div class="skill-bar w-full h-2 rounded-full overflow-hidden">
+       <div class="skill-bar-inner h-full w-2/5">
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- Achievements Section -->
+<section class="mb-10">
+  <h2 class="text-3xl font-bold mb-4">Achievements</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="relative">
+          <img src="images\a1.PNG" alt="Achievement 1" class="achievement-image cursor-pointer" />
+      </div>
+      <div class="relative">
+          <img src="images\a2.png" alt="Achievement 2" class="achievement-image cursor-pointer" />
+      </div>
+      <div class="relative">
+          <img src="path/to/achievement3.jpg" alt="Achievement 3" class="achievement-image cursor-pointer" />
+      </div>
+
+  </div>
+</section>
+
+<div id="quizzes"></div>
+<section class="mb-10">
+ <h2 class="text-3xl font-bold mb-4">
+  Quizzes
+ </h2>
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="p-4 bg-gray-800 rounded-lg">
+   <img alt="Quiz 1 image" class="mb-2" height="200" src="images\q1.jpg" width="300"/>
+   <h3 class="text-xl font-bold">
+    Quiz 1
+   </h3>
+  </div>
+  <div class="p-4 bg-gray-800 rounded-lg">
+   <img alt="Quiz 2 image" class="mb-2" height="200" src="images\q2.jpg" width="300"/>
+   <h3 class="text-xl font-bold">
+    Quiz 2
+   </h3>
+  </div>
+  <div class="p-4 bg-gray-800 rounded-lg">
+   <img alt="Quiz 3 image" class="mb-2" height="200" src="images\q3.jpg" width="300"/>
+   <h3 class="text-xl font-bold">
+    Quiz 3
+   </h3>
+  </div>
+  <div class="p-4 bg-gray-800 rounded-lg">
+   <img alt="Quiz 4 image" class="mb-2" height="200" src="images\q4.jpg" width="300"/>
+   <h3 class="text-xl font-bold">
+    Quiz 4
+   </h3>
+  </div>
+  <div class="p-4 bg-gray-800 rounded-lg">
+   <img alt="Quiz 5 image" class="mb-2" height="200" src="images/q5.jpg" width="300"/>
+   <h3 class="text-xl font-bold">
+    Quiz 5
+   </h3>
+  </div>
+ </div>
+</section>
+
+<div id="project"></div>
+
+<section>
+ <h2 class="text-3xl font-bold mb-4">
+ Past Projects
+ </h2>
+ <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div class="p-4 bg-gray-800 rounded-lg">
+   <img alt="open community for CvSU students" class="mb-2" height="200" src="images\proj2.png" width="295"/>
+   <h3 class="text-xl font-bold">
+   Hubsuhenyo    
+   </h3>
+  
+  </div>
+  <div class="p-4 bg-gray-800 rounded-lg">
+   <img style="border-radius: 15px;" alt="Business Site" class="mb-2" height="200" src="images\proj1.png" width="295"/>
+   <h3 class="text-xl font-bold">
+   Wear Mania
+   </h3>
+  
+  </div>
+  <div class="p-4 bg-gray-800 rounded-lg">
+   <img alt="Food app" class="mb-2" height="200" src="images\proj.png" width="295"/>
+   <h3 class="text-xl font-bold">
+    Tita Mars
+   </h3>
+   
+  </div>
+ </div>
+</section>
+</div>
+
+
+<div id="imageModal" class="modal hidden">
+  <span class="close cursor-pointer">&times;</span>
+  <img class="modal-content" id="modalImage" />
+</div>
+   
+
+ 
+  <button class="back-to-top" id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+  <script>
+    const backToTopButton = document.getElementById("back-to-top");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+    backToTopButton.onclick = function () {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    };
+
+
+     const links = document.querySelectorAll('.navigate');
+        const loading = document.getElementById('loading');
+
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                loading.style.display = 'block'; // Show loading screen
+            });
+        });
+
+        // Get the modal
+const modal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+const closeModal = document.querySelector(".close");
+
+// Get all achievement images
+const achievementImages = document.querySelectorAll(".achievement-image");
+
+// Add click event to each image
+achievementImages.forEach(image => {
+    image.addEventListener("click", function() {
+        modal.style.display = "flex"; // Show the modal
+        modalImage.src = this.src; // Set the modal image source to the clicked image
+    });
+});
+
+// Close the modal when the close button is clicked
+closeModal.addEventListener("click", function() {
+    modal.style.display = "none"; // Hide the modal
+});
+
+// Close the modal when clicking outside the image
+modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none"; // Hide the modal
+    }
+});
+  </script>
+
+<footer class=" text-right text-sm p-4 mt-10">
+  © 2025 Ragusta, Phillip Yvan P. All rights reserved.
+</footer>
+
+
+</body>
+
+
+</html>
